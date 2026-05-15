@@ -3,7 +3,9 @@ export interface PlatformResult {
   platformSlug: string;
   restaurantName: string;
   restaurantId: string;
+  restaurantPlatformId: string;
   itemName: string;
+  itemId: string;
   category: string | null;
   isVeg: boolean | null;
   imageUrl: string | null;

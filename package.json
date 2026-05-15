@@ -8,11 +8,11 @@
     "scrapers"
   ],
   "scripts": {
-    "dev": "concurrently \"npm run dev:frontend\" \"npm run dev:backend\"",
-    "dev:frontend": "npm run dev --workspace=frontend",
-    "dev:backend": "npm run dev --workspace=backend",
-    "dev:scrapers": "npm run dev --workspace=scrapers",
-    "build": "npm run build --workspace=frontend && npm run build --workspace=backend",
+    "dev": "node init && concurrently \"npm run dev:frontend\" \"npm run dev:backend\"",
+    "dev:frontend": "node init && npm run dev --workspace=frontend",
+    "dev:backend": "node init && npm run dev --workspace=backend",
+    "dev:scrapers": "node init && npm run dev --workspace=scrapers",
+    "build": "node init && npm run build --workspace=frontend && npm run build --workspace=backend",
     "scrape": "npm run start --workspace=scrapers"
   },
   "devDependencies": {
